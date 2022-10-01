@@ -46,9 +46,6 @@ public class PracticeChartActivity extends AppCompatActivity {
 
         chart.setDragDecelerationFrictionCoef(0.95f);
 
-        chart.setCenterText("Center text");
-        chart.setCenterTextColor(Color.BLACK);
-
         chart.setDrawHoleEnabled(true);
         chart.setHoleColor(Color.WHITE);
 
@@ -82,10 +79,10 @@ public class PracticeChartActivity extends AppCompatActivity {
 //        chart.setEntryLabelTypeface(tfRegular);
         chart.setEntryLabelTextSize(12f);
 
-        setData(4, 6);
+        setData(4);
     }
 
-    private void setData(int count, float range) {
+    private void setData(int count) {
         ArrayList<PieEntry> entries = new ArrayList<>();
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
@@ -101,7 +98,7 @@ public class PracticeChartActivity extends AppCompatActivity {
             );
         }
 
-        PieDataSet dataSet = new PieDataSet(entries, "Legends label");
+        PieDataSet dataSet = new PieDataSet(entries, "");
 
         dataSet.setDrawIcons(false);
 
