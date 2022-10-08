@@ -3,10 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/minlee1/Desktop/MyApplication/Study_Bee/app/src/main/res/layout/activity_piechart.xml" value="0.1" />
-        <entry key="..\:/Users/minlee1/Desktop/MyApplication/Study_Bee/app/src/main/res/layout/activity_second.xml" value="0.13125" />
+        <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.265" />
+        <entry key="app/src/main/res/drawable/home_drawable.xml" value="0.1805" />
+        <entry key="app/src/main/res/drawable/openbox_drawable.xml" value="0.265" />
+        <entry key="app/src/main/res/drawable/pencil_drawable.xml" value="0.1725" />
+        <entry key="app/src/main/res/layout/activity_english.xml" value="0.2796875" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/layout/activity_literature.xml" value="0.28020833333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.182518115942029" />
+        <entry key="app/src/main/res/layout/activity_math.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_piechart.xml" value="0.3328125" />
+        <entry key="app/src/main/res/layout/activity_reading.xml" value="0.28020833333333334" />
+        <entry key="app/src/main/res/layout/activity_readingwrong.xml" value="0.28020833333333334" />
+        <entry key="app/src/main/res/layout/activity_science.xml" value="0.28020833333333334" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_socialstudies.xml" value="0.28020833333333334" />
+        <entry key="app/src/main/res/layout/activity_writing.xml" value="0.28020833333333334" />
+        <entry key="app/src/main/res/layout/practice_activity_main.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/practice_activity_second.xml" value="0.28072916666666664" />
       </map>
     </option>
   </component>

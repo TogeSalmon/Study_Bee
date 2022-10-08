@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="READING"
+        android:textSize="30sp"
+        android:textColor="#cc6666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/openbox_drawable"
+        android:text="U.S. &amp; World\n Literature"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_weight="5"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="154dp"
+        android:id="@+id/us"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/openbox_drawable"
+        android:text="Social Studies"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_weight="5"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="154dp"
+        android:id="@+id/ss"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/openbox_drawable"
+        android:text="Science"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_weight="5"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="377dp"
+        android:id="@+id/science"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/home_drawable"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

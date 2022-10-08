@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOCIAL STUDIES"
+        android:textSize="30sp"
+        android:textColor="#cc6666"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ideas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/openbox_drawable"
+        android:text="Information &amp;\n Ideas"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_weight="5"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <Button
+        android:id="@+id/rhetoric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/openbox_drawable"
+        android:text="Rhetoric"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_weight="5"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <Button
+        android:id="@+id/synthesis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/openbox_drawable"
+        android:text="Synthesis"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_weight="5"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/home_drawable"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="incorrect answers"
+        app:layout_constraintEnd_toEndOf="@+id/ideas"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ideas"
+        app:layout_constraintTop_toBottomOf="@+id/ideas" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="134dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="incorrect answers"
+        app:layout_constraintEnd_toEndOf="@+id/rhetoric"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="@+id/rhetoric"
+        app:layout_constraintTop_toBottomOf="@+id/rhetoric" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="133dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="incorrect answers"
+        app:layout_constraintEnd_toEndOf="@+id/synthesis"
+        app:layout_constraintStart_toStartOf="@+id/synthesis"
+        app:layout_constraintTop_toBottomOf="@+id/synthesis" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        app:srcCompat="@drawable/info"
+        tools:layout_editor_absoluteX="349dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

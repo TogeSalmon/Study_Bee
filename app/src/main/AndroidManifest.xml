@@ -14,15 +14,7 @@
         android:theme="@style/Theme.StudyBee"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".SecondActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".PracticeChartActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +22,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".PracticeSecondActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".PracticeChartActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".EnglishActivity"
+            android:exported="true"
+            />
+        <activity android:name=".MathActivity"
+            android:exported="true"
+            />
 
     </application>
 
