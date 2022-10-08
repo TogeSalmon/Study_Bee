@@ -36,6 +36,14 @@
         <activity android:name=".EnglishActivity"
             android:exported="true"
             />
+        <activity android:name=".ReadingActivity"
+            android:exported="true"
+            />
+
+        <activity android:name=".SocialStudiesActivity"
+            android:exported="true"
+            />
+
         <activity android:name=".MathActivity"
             android:exported="true"
             />

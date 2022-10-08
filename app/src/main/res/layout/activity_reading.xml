@@ -7,59 +7,65 @@
     android:background="@drawable/gradient_background">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="READING"
-        android:textSize="30sp"
         android:textColor="#cc6666"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
         android:text="U.S. &amp; World\n Literature"
+
         android:textColor="#ffffff"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintHorizontal_weight="5"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="154dp"
-        android:id="@+id/us"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/ss"
+        android:layout_width="157dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="136dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
         android:text="Social Studies"
         android:textColor="#ffffff"
         app:layout_constraintHorizontal_weight="5"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="154dp"
-        android:id="@+id/ss"
-        tools:ignore="MissingConstraints"/>
+        app:layout_constraintStart_toEndOf="@+id/us"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
+        android:id="@+id/science"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="168dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
         android:text="Science"
         android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_weight="5"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="377dp"
-        android:id="@+id/science"
-        tools:ignore="MissingConstraints"/>
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/home_drawable"
         android:background="@android:color/transparent"
+        android:drawableTop="@drawable/home_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
