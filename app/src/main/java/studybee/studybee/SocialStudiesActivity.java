@@ -25,7 +25,7 @@ public class SocialStudiesActivity extends AppCompatActivity {
                 builder.setMessage("Information & Ideas: Textual evidence, central ideas, and themes, summarizing, understanding relationships, and interpreting words and phrases in context\n\nRhetoric: Analyze word choice, text structure, point of view purpose, and arguments\n\nSynthesis: Analyze word choice, text structure, point of view purpose, and arguments");
                 builder.setTitle("Description");
 
-                builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
+                builder.setPositiveButton("Back", (DialogInterface.OnClickListener) (dialog, which) -> {
                 });
 
                 AlertDialog alertDialog = builder.create();

@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="52dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
         android:text="Information &amp;\n Ideas"
@@ -34,9 +34,9 @@
 
     <Button
         android:id="@+id/rhetoric"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_width="147dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
@@ -49,10 +49,10 @@
 
     <Button
         android:id="@+id/synthesis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="154dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
         android:text="Synthesis"
@@ -65,9 +65,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/home_drawable"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
         android:background="@android:color/transparent"
+        android:drawableTop="@drawable/home_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -76,7 +79,8 @@
         android:layout_height="49dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="incorrect answers"
+        android:hint="Incorrect answer"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/ideas"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ideas"
@@ -84,11 +88,12 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="134dp"
-        android:layout_height="43dp"
+        android:layout_width="142dp"
+        android:layout_height="41dp"
         android:ems="10"
+        android:hint="Incorrect answer"
         android:inputType="textPersonName"
-        android:hint="incorrect answers"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/rhetoric"
         app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="@+id/rhetoric"
@@ -96,11 +101,12 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="133dp"
-        android:layout_height="37dp"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
         android:ems="10"
+        android:hint="Incorrect answer"
         android:inputType="textPersonName"
-        android:hint="incorrect answers"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/synthesis"
         app:layout_constraintStart_toStartOf="@+id/synthesis"
         app:layout_constraintTop_toBottomOf="@+id/synthesis" />
@@ -109,8 +115,8 @@
         android:id="@+id/info"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/info" />
