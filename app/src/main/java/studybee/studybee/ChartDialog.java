@@ -100,22 +100,19 @@ public class ChartDialog extends DialogFragment {
 //        chart.setEntryLabelTypeface(tfRegular);
         chart.setEntryLabelTextSize(12f);
 
-        setData(4);
+        setData();
     }
 
-    private void setData(int count) {
+    private void setData() {
         ArrayList<PieEntry> entries = new ArrayList<>();
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
-        final String[] parties = new String[]{
-                "Party A", "Party B", "Party C", "Party D"
-        };
 
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < legends.length; i++) {
             entries.add(
-                    new PieEntry((float) (10),
-                            parties[i])
+                    new PieEntry((float) (numbers[i]),
+                            legends[i])
             );
         }
 
