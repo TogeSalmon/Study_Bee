@@ -1,10 +1,18 @@
 package studybee.studybee;
 
+import android.content.DialogInterface;
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 
+import androidx.appcompat.app.AlertDialog;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -17,16 +25,42 @@ import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
 
-public class PracticeChartActivity extends AppCompatActivity {
+public class ChartDialog extends DialogFragment {
 
-    private PieChart chart;
+    PieChart chart;
+    String[] legends;
+    int[] numbers;
+
+    public ChartDialog(String[] legends, int[] numbers) {
+        legends = this.legends;
+        numbers = this.numbers;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.practice_activity_piechart);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.chart, container);
+    }
 
-        chart = findViewById(R.id.chart);
+//    @NonNull
+//    @Override
+//    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+//        return new AlertDialog.Builder(getActivity())
+//                .setTitle("Title t")
+//                .setPositiveButton("Back", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int whichButton) {
+//                        dismiss();
+//                    }
+//                        }
+//                )
+//                .create();
+//    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getDialog().setTitle("Chart");
+        chart = view.findViewById(R.id.chart);
         chart.setUsePercentValues(true);
         chart.getDescription().setEnabled(false);
         chart.setExtraOffsets(5, 10, 5, 5);
@@ -74,14 +108,14 @@ public class PracticeChartActivity extends AppCompatActivity {
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
-        final String[] parties = new String[] {
+        final String[] parties = new String[]{
                 "Party A", "Party B", "Party C", "Party D"
         };
 
-        for (int i = 0; i < count ; i++) {
+        for (int i = 0; i < count; i++) {
             entries.add(
-                new PieEntry((float) (10),
-                parties[i])
+                    new PieEntry((float) (10),
+                            parties[i])
             );
         }
 
