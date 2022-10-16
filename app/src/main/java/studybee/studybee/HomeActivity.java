@@ -1,6 +1,7 @@
 package studybee.studybee;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,21 +14,29 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Button button = findViewById(R.id.english);
-        Button button2 = findViewById(R.id.math);
+        Button english = findViewById(R.id.english);
+        Button math = findViewById(R.id.math);
+        Button link = findViewById(R.id.link);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        english.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(HomeActivity.this, EnglishActivity.class);
                 startActivity(intent);
             }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
+        math.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, MathActivity.class);
                 startActivity(intent);
+            }
+        });
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.khanacademy.org/SAT"));
+                startActivity(browserIntent);
             }
         });
     }

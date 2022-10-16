@@ -32,8 +32,8 @@ public class ChartDialog extends DialogFragment {
     int[] numbers;
 
     public ChartDialog(String[] legends, int[] numbers) {
-        legends = this.legends;
-        numbers = this.numbers;
+        this.legends = legends;
+        this.numbers = numbers;
     }
 
     @Override
@@ -108,6 +108,7 @@ public class ChartDialog extends DialogFragment {
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
+
 
         for (int i = 0; i < legends.length; i++) {
             entries.add(
