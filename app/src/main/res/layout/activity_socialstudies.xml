@@ -19,8 +19,8 @@
 
     <Button
         android:id="@+id/ideas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
         android:background="@android:color/transparent"
@@ -34,7 +34,7 @@
 
     <Button
         android:id="@+id/rhetoric"
-        android:layout_width="147dp"
+        android:layout_width="180dp"
         android:layout_height="173dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="16dp"
@@ -43,14 +43,13 @@
         android:text="Rhetoric"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="5"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/synthesis"
-        android:layout_width="150dp"
-        android:layout_height="154dp"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
@@ -59,7 +58,7 @@
         android:textColor="#ffffff"
         app:layout_constraintHorizontal_weight="5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/et_ideas"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -74,39 +73,37 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/et_ideas"
         android:layout_width="151dp"
         android:layout_height="49dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Incorrect answer"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/ideas"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ideas"
         app:layout_constraintTop_toBottomOf="@+id/ideas" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="142dp"
-        android:layout_height="41dp"
+        android:id="@+id/et_rhetoric"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
         android:ems="10"
         android:hint="Incorrect answer"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/rhetoric"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="@+id/rhetoric"
         app:layout_constraintTop_toBottomOf="@+id/rhetoric" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="150dp"
-        android:layout_height="36dp"
+        android:id="@+id/et_synthesis"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
         android:ems="10"
         android:hint="Incorrect answer"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/synthesis"
         app:layout_constraintStart_toStartOf="@+id/synthesis"
         app:layout_constraintTop_toBottomOf="@+id/synthesis" />

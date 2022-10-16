@@ -32,5 +32,12 @@ public class ReadingActivity extends AppCompatActivity {
             }
         });
 
+        science.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(ReadingActivity.this, ScienceActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

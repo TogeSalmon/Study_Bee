@@ -7,66 +7,145 @@
     android:background="@drawable/gradient_background">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MATH"
-        android:textSize="30sp"
         android:textColor="#cc6666"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/algebra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/heartofalgebra"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
-        android:text="Heart of Algebra"
+        android:text="HEART OF ALGEBRA"
         android:textColor="#ffffff"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="118dp"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/problemsolving"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
-        android:text="Problem Solving\n &amp; Data Analysis"
+        android:text="PROBLEM SOLVING\n&amp; DATA ANALYSIS"
         android:textColor="#ffffff"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="118dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/passporttoadvancedmath"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:drawableTop="@drawable/openbox_drawable"
-        android:text="Passport to\n Advanced Math"
+        android:text="PASSPORT TO ADVANCED MATH"
         android:textColor="#ffffff"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="404dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:drawableTop="@drawable/openbox_drawable"
-        android:text="Additional Topics"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="404dp"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_heartofalgebra"
         tools:ignore="MissingConstraints" />
 
+
+    <Button
+        android:id="@+id/additionaltopicsinmath"
+        android:layout_width="180dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/openbox_drawable"
+        android:text="ADDITIONAL TOPICS IN MATH"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintTop_toBottomOf="@+id/et_problemsolving"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_heartofalgebra"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Incorrect answer"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/heartofalgebra"
+        app:layout_constraintStart_toStartOf="@+id/heartofalgebra"
+        app:layout_constraintTop_toBottomOf="@+id/heartofalgebra" />
+
+    <EditText
+        android:id="@+id/et_problemsolving"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Incorrect answer"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/problemsolving"
+        app:layout_constraintStart_toStartOf="@+id/problemsolving"
+        app:layout_constraintTop_toBottomOf="@+id/problemsolving" />
+
+    <EditText
+        android:id="@+id/et_passporttoadvancedmath"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Incorrect answer"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/passporttoadvancedmath"
+        app:layout_constraintStart_toStartOf="@+id/passporttoadvancedmath"
+        app:layout_constraintTop_toBottomOf="@+id/passporttoadvancedmath" />
+
+    <EditText
+        android:id="@+id/et_additionaltopicsinmath"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Incorrect answer"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/additionaltopicsinmath"
+        app:layout_constraintStart_toStartOf="@+id/additionaltopicsinmath"
+        app:layout_constraintTop_toBottomOf="@+id/additionaltopicsinmath" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
         android:drawableTop="@drawable/home_drawable"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/info" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

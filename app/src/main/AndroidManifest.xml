@@ -48,6 +48,18 @@
             android:exported="true"
             />
 
+        <activity android:name=".WritingActivity"
+            android:exported="true"
+            />
+
+        <activity android:name=".ScienceActivity"
+            android:exported="true"
+            />
+
+        <activity android:name=".USActivity"
+            android:exported="true"
+            />
+
     </application>
 
 </manifest>

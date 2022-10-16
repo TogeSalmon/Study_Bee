@@ -23,5 +23,12 @@ public class EnglishActivity extends AppCompatActivity{
             }
         });
 
+        writing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(EnglishActivity.this, WritingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
