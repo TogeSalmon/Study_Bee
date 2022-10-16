@@ -48,9 +48,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/home_drawable"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
         android:background="@android:color/transparent"
+        android:drawableTop="@drawable/home_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/homebutton"
         tools:ignore="MissingConstraints" />
 
 

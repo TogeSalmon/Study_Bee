@@ -71,6 +71,7 @@
         android:drawableTop="@drawable/home_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/homebutton"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -79,6 +80,7 @@
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Incorrect answer"
+        android:inputType="number"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/ideas"
@@ -91,6 +93,7 @@
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Incorrect answer"
+        android:inputType="number"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/rhetoric"
@@ -103,6 +106,7 @@
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Incorrect answer"
+        android:inputType="number"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/synthesis"
@@ -119,5 +123,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/info" />
 
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/info"
+        android:id="@+id/piechart"
+        app:srcCompat="@drawable/pie_chart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

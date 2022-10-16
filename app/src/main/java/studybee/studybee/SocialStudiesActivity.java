@@ -11,27 +11,53 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.ViewModelProvider;
 
 public class SocialStudiesActivity extends AppCompatActivity {
+    public static String SOCIAL_STUDIES_IDEAS = "SOCIAL_STUDIES_IDEAS";
+    public static String SOCIAL_STUDIES_RHETORIC = "SOCIAL_STUDIES_RHETORIC";
+    public static String SOCIAL_STUDIES_SYNTHESIS = "SOCIAL_STUDIES_SYNTHESIS";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_socialstudies);
-        ImageView pie_chart = findViewById(R.id.piechart);
         ImageView info = findViewById(R.id.info);
+        ImageView pie_chart = findViewById(R.id.piechart);
         Button home = findViewById(R.id.homebutton);
-        EditText incorrectanswerinfoandideas = findViewById(R.id.editTextIncorrectAnswerInfoandIdeas);
-        EditText incorrectanswerrhetoric = findViewById(R.id.editTextIncorrectAnswerRhetoric);
-        EditText incorrectanswersynthesis = findViewById(R.id.editTextIncorrectAnswerSynthesis);
+
+        StudyBeeViewModel viewModel = new ViewModelProvider(this).get(StudyBeeViewModel.class);
+
+        EditText ideasEditText = findViewById(R.id.et_ideas);
+        EditText synthesisEditText = findViewById(R.id.et_synthesis);
+        EditText rhetoricEditText = findViewById(R.id.et_rhetoric);
+
+        ideasEditText.addTextChangedListener(new IncorrectAnswerTextWatcher(SOCIAL_STUDIES_IDEAS, ideasEditText, viewModel));
+        synthesisEditText.addTextChangedListener(new IncorrectAnswerTextWatcher(SOCIAL_STUDIES_SYNTHESIS, synthesisEditText, viewModel));
+        rhetoricEditText.addTextChangedListener(new IncorrectAnswerTextWatcher(SOCIAL_STUDIES_RHETORIC, rhetoricEditText, viewModel));
+
+        int ideasScore = viewModel.getScore(SOCIAL_STUDIES_IDEAS);
+        int synthesisScore = viewModel.getScore(SOCIAL_STUDIES_SYNTHESIS);
+        int rhetoricScore = viewModel.getScore(SOCIAL_STUDIES_RHETORIC);
+
+        if (ideasScore != 0) {
+            ideasEditText.setText(ideasScore + "");
+        }
+        if (synthesisScore != 0) {
+            synthesisEditText.setText(synthesisScore + "");
+        }
+        if (rhetoricScore != 0) {
+            rhetoricEditText.setText(rhetoricScore + "");
+        }
 
         pie_chart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String infoandideas = incorrectanswerinfoandideas.getText().toString();
-                String rhetoric = incorrectanswerrhetoric.getText().toString();
-                String synthesis = incorrectanswersynthesis.getText().toString();
+                String infoandideas = ideasEditText.getText().toString();
+                String rhetoric = rhetoricEditText.getText().toString();
+                String synthesis = synthesisEditText.getText().toString();
                 FragmentManager fm = getSupportFragmentManager();
-                ChartDialog chartDialog = new ChartDialog(new String[]{"Info & Ideas", "Rhetoric", "Synthesis"}, new int[]{new Integer(infoandideas),new Integer(rhetoric),new Integer(synthesis)});
+                ChartDialog chartDialog = new ChartDialog(new String[]{"Info & Ideas", "Rhetoric", "Synthesis"}, new String[]{infoandideas, rhetoric, synthesis});
                 chartDialog.show(fm, "ChartDialog");
             }
         });
@@ -48,7 +74,7 @@ public class SocialStudiesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(SocialStudiesActivity.this);
 
-                builder.setMessage("Information & Ideas: Textual evidence, central ideas, and themes, summarizing, understanding relationships, and interpreting words and phrases in context\n\nRhetoric: Analyze word choice, text structure, point of view purpose, and arguments\n\nSynthesis: Analyze word choice, text structure, point of view purpose, and arguments");
+                builder.setMessage("Information & Ideas: Textual evidence, central ideasEditText, and themes, summarizing, understanding relationships, and interpreting words and phrases in context\n\nRhetoric: Analyze word choice, text structure, point of view purpose, and arguments\n\nSynthesis: Analyze word choice, text structure, point of view purpose, and arguments");
                 builder.setTitle("Description");
 
                 builder.setPositiveButton("Back", (DialogInterface.OnClickListener) (dialog, which) -> {
@@ -56,10 +82,7 @@ public class SocialStudiesActivity extends AppCompatActivity {
 
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
-
             }
         });
-
-
     }
 }

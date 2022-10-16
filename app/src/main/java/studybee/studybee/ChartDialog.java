@@ -24,6 +24,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ChartDialog extends DialogFragment {
 
@@ -31,9 +32,17 @@ public class ChartDialog extends DialogFragment {
     String[] legends;
     int[] numbers;
 
-    public ChartDialog(String[] legends, int[] numbers) {
+    public ChartDialog(String[] legends, String[] numbersString) {
         this.legends = legends;
-        this.numbers = numbers;
+
+        this.numbers = new int[numbersString.length];
+        for (int i = 0; i < numbersString.length; i++) {
+            if (numbersString[i] == null || Objects.equals(numbersString[i], "")) {
+                numbers[i] = 0;
+            } else {
+                numbers[i] = new Integer(numbersString[i]);
+            }
+        }
     }
 
     @Override

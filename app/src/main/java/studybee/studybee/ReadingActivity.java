@@ -15,6 +15,7 @@ public class ReadingActivity extends AppCompatActivity {
         Button us = findViewById(R.id.us);
         Button ss = findViewById(R.id.ss);
         Button science = findViewById(R.id.science);
+        Button home = findViewById(R.id.homebutton);
 
         us.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +37,14 @@ public class ReadingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(ReadingActivity.this, ScienceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReadingActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

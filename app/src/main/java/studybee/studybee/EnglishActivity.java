@@ -14,6 +14,7 @@ public class EnglishActivity extends AppCompatActivity{
         setContentView(R.layout.activity_english);
         Button reading = findViewById(R.id.reading);
         Button writing = findViewById(R.id.writing);
+        Button home = findViewById(R.id.homebutton);
 
         reading.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +28,14 @@ public class EnglishActivity extends AppCompatActivity{
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(EnglishActivity.this, WritingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EnglishActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
